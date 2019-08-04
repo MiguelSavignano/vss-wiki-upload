@@ -1,3 +1,5 @@
 node_modules
 variables.json
 miguel-savignano.wiki-upload-*.vsix
+buildAndReleaseTask/index.js
+test.sh
