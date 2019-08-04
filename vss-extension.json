@@ -1,8 +1,8 @@
 {
   "manifestVersion": 1,
-  "id": "tslint-report",
-  "name": "tslint report",
-  "version": "0.0.2",
+  "id": "wiki-upload",
+  "name": "wiki upload",
+  "version": "0.0.9",
   "publisher": "miguel-savignano",
   "content": {
     "details": {
@@ -21,28 +21,21 @@
       "id": "Microsoft.VisualStudio.Services"
     }
   ],
-  "description": "tslint report",
-  "categories": [
-    "Azure Pipelines"
-  ],
+  "description": "wiki upload",
+  "categories": ["Azure Pipelines"],
   "icons": {
-    "default": "images/extension-icon.png"
+    "default": "./buildAndReleaseTask/images/icon.png"
   },
   "files": [
     {
       "path": "./buildAndReleaseTask"
-    },
-    {
-      "path": "images"
     }
   ],
   "contributions": [
     {
       "id": "custom-build-release-task",
       "type": "ms.vss-distributed-task.task",
-      "targets": [
-        "ms.vss-distributed-task.tasks"
-      ],
+      "targets": ["ms.vss-distributed-task.tasks"],
       "properties": {
         "name": "buildAndReleaseTask"
       }

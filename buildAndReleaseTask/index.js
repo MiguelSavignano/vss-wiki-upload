@@ -49,6 +49,7 @@ function run() {
         return __generator(this, function (_a) {
             try {
                 tslintResultFilePath = tl.getInput("filePath", true);
+                console.log(JSON.stringify(tl.getVariables(), null, 2));
                 console.log("[input] filePath " + tslintResultFilePath);
             }
             catch (err) {
