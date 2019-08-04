@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "wiki-upload",
   "name": "wiki upload",
-  "version": "0.0.9",
+  "version": "0.0.13",
   "publisher": "miguel-savignano",
   "content": {
     "details": {
@@ -22,9 +22,11 @@
     }
   ],
   "description": "wiki upload",
-  "categories": ["Azure Pipelines"],
+  "categories": [
+    "Azure Pipelines"
+  ],
   "icons": {
-    "default": "./buildAndReleaseTask/images/icon.png"
+    "default": "images/icon.png"
   },
   "files": [
     {
@@ -35,7 +37,9 @@
     {
       "id": "custom-build-release-task",
       "type": "ms.vss-distributed-task.task",
-      "targets": ["ms.vss-distributed-task.tasks"],
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
       "properties": {
         "name": "buildAndReleaseTask"
       }

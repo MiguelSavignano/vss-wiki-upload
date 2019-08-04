@@ -45,12 +45,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var tl = __importStar(require("azure-pipelines-task-lib/task"));
 function run() {
     return __awaiter(this, void 0, void 0, function () {
-        var tslintResultFilePath;
+        var filePath, wikiId, apiToken;
         return __generator(this, function (_a) {
             try {
-                tslintResultFilePath = tl.getInput("filePath", true);
-                console.log(JSON.stringify(tl.getVariables(), null, 2));
-                console.log("[input] filePath " + tslintResultFilePath);
+                filePath = tl.getInput("filePath", true);
+                wikiId = tl.getInput("wikiId", true);
+                apiToken = tl.getInput("apiToken", true);
+                console.log(exports.getOrganizationName(), exports.getProjectId());
+                // console.log(JSON.stringify(tl.getVariables(), null, 2));
+                console.log("[inputs] " + filePath + " " + wikiId + " " + apiToken);
             }
             catch (err) {
                 tl.setResult(tl.TaskResult.Failed, err.message);
@@ -59,4 +62,11 @@ function run() {
         });
     });
 }
+exports.getOrganizationName = function () {
+    var varaible = tl.getVariable("system.teamFoundationCollectionUri");
+    return varaible.split("/")[3] || "";
+};
+exports.getProjectId = function () {
+    return tl.getVariable("system.teamFoundationCollectionUri");
+};
 run();

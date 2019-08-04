@@ -14,12 +14,12 @@ async function run() {
 }
 
 export const getOrganizationName = () => {
-  const varaible = tl.getTaskVariable("system.teamFoundationCollectionUri");
+  const varaible = tl.getVariable("system.teamFoundationCollectionUri");
   return varaible.split("/")[3] || "";
 };
 
 export const getProjectId = () => {
-  return tl.getTaskVariable("system.teamFoundationCollectionUri");
+  return tl.getVariable("system.teamFoundationCollectionUri");
 };
 
 run();
