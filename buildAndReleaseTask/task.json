@@ -1,5 +1,5 @@
 {
-  "id": "2050d709-5ac9-4484-ba1e-bebb976af397",
+  "id": "2541f97c-7274-4a31-9ba4-d552a572172c",
   "name": "wiki-upload",
   "friendlyName": "wiki-upload",
   "description": "wiki upload",
@@ -9,9 +9,9 @@
   "version": {
     "Major": 0,
     "Minor": 0,
-    "Patch": 31
+    "Patch": 6
   },
-  "instanceNameFormat": "Wiki upload v0.0.31",
+  "instanceNameFormat": "Wiki upload v0.0.6",
   "inputs": [
     {
       "name": "filePath",

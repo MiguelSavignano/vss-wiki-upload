@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "wiki-upload",
   "name": "wiki upload",
-  "version": "0.0.31",
+  "version": "0.0.6",
   "publisher": "miguel-savignano",
   "content": {
     "details": {
