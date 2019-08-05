@@ -4,21 +4,21 @@ import { WikiUploadFileService } from "vsts-wiki-upload";
 async function run() {
   try {
     const filePath = tl.getInput("filePath", true);
-    const wikiId = tl.getInput("wikiId", true);
-    const apiToken = tl.getInput("apiToken", true);
-    const organizationName = getOrganizationName();
-    const projectName = getProjectId();
+    const apiToken = tl.getVariable("system.accessToken");
+    const organizationName = getOrganizationName(
+      tl.getVariable("system.teamFoundationCollectionUri")
+    );
+    const projectName = tl.getVariable("system.teamProject");
 
     console.log(`[NODE_VERSION] ${process.version}`);
     console.log(JSON.stringify(tl.getVariables(), null, 2));
     console.log(
-      `[inputs] ${filePath} ${wikiId} ${apiToken} ${organizationName} ${projectName}`
+      `[inputs] ${filePath} ${apiToken} ${organizationName} ${projectName}`
     );
 
     new WikiUploadFileService({
       organizationName,
       projectName,
-      wikiId,
       apiToken,
       filePath
     }).run();
@@ -27,13 +27,6 @@ async function run() {
   }
 }
 
-export const getOrganizationName = () => {
-  const varaible = tl.getVariable("system.teamFoundationCollectionUri");
-  return varaible.split("/")[3] || "";
-};
-
-export const getProjectId = () => {
-  return tl.getVariable("system.teamProject");
-};
+export const getOrganizationName = (url: string) => url.split("/")[3] || "";
 
 run();

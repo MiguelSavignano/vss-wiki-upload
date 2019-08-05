@@ -1,5 +1,5 @@
 {
-  "id": "e8ff452c-03e1-4e35-9fd0-5528054b8f96",
+  "id": "2050d709-5ac9-4484-ba1e-bebb976af397",
   "name": "wiki-upload",
   "friendlyName": "wiki-upload",
   "description": "wiki upload",
@@ -9,9 +9,9 @@
   "version": {
     "Major": 0,
     "Minor": 0,
-    "Patch": 29
+    "Patch": 31
   },
-  "instanceNameFormat": "Wiki upload v0.0.29",
+  "instanceNameFormat": "Wiki upload v0.0.31",
   "inputs": [
     {
       "name": "filePath",
@@ -19,20 +19,6 @@
       "label": "File or folder path",
       "required": true,
       "helpMarkDown": "file or folder path"
-    },
-    {
-      "name": "wikiId",
-      "type": "string",
-      "label": "wikiId",
-      "required": true,
-      "helpMarkDown": "wikiId"
-    },
-    {
-      "name": "apiToken",
-      "type": "string",
-      "label": "ApiToken from vsts api",
-      "required": true,
-      "helpMarkDown": "ApiToken from vsts ap"
     }
   ],
   "execution": {
