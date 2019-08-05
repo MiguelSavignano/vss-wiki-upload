@@ -9,10 +9,11 @@ async function run() {
     const organizationName = getOrganizationName();
     const projectName = getProjectId();
 
-    // console.log("[NODE_VERSION]", process.version);
-    // console.log(
-    //   `[inputs] ${filePath} ${wikiId} ${apiToken} ${organizationName} ${projectName}`
-    // );
+    console.log(`[NODE_VERSION] ${process.version}`);
+    console.log(JSON.stringify(tl.getVariables(), null, 2));
+    console.log(
+      `[inputs] ${filePath} ${wikiId} ${apiToken} ${organizationName} ${projectName}`
+    );
 
     new WikiUploadFileService({
       organizationName,
